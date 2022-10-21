@@ -48,12 +48,18 @@ for (let elem of par) {
 let r = Math.floor(Math.random() *255);
 let g = Math.floor(Math.random() *255);
 let b = Math.floor(Math.random() *255);
- elem.style.color = 'rgb('+ r +', '+ g +','+ b +')';
+ elem.style.background = 'rgb('+ r +', '+ g +','+ b +')';
 
- elem.style.background =((0.3 * r) + (0.59 * g) + (0.11 * b) <= 128) ? '#FFF' : '#000';
+ if ((0.3 * r) + (0.59 * g) + (0.11 * b) <= 128) {
+   elem.style.color = 'white'
+ }
+ else {
+   elem.style.color = 'black'
+ }
+ /*elem.style.background =((0.3 * r) + (0.59 * g) + (0.11 * b) <= 128) ? '#FFF' : '#000';*/
 
 }
 
 
 
- 
+
